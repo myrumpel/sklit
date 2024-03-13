@@ -1,0 +1,40 @@
+header {
+  padding-top: 8px;
+}
+
+
+.main-nav{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 0;
+  border-bottom: 1px solid rgba(185, 185, 185, 0.4);
+  padding-bottom: 12px ;
+  &:not(:last-child){
+  }
+a {
+&:not(:last-of-type){
+  margin-right: 12px;
+
+}
+  display: flex;
+  font-size: 14px;
+  width: calc(100% / 7 - 12px);
+  padding: 25px;
+  min-height: 80px;
+  text-align: center;
+  box-shadow: none;
+  border: 0.5px solid rgba(185, 185, 185, 0.3);
+
+border-radius: 8px;
+  &::after{
+    background-color: red;
+  }
+}
+
+
+}
+.activeLink{
+  background-color: #e8f6ff !important;
+}
+
+

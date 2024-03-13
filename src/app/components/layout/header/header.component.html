@@ -1,0 +1,47 @@
+<header class="h-[80px] flex flex-col my-header">
+  <div
+    class="first-line flex justify-between items-center rounded-[8px] mb-4 bg-[#0078B1] p-[12px] <!-- shadow-[inset_10px_10px_50px_50px_rgba(255,255,255,0.59)]--> shadow-[inset_0_0_12px_-4px_rgba(255,255,255,255.2)]"
+  >
+    <a routerLink="/home" class="flex items-center">
+      <img
+        class="max-w-[40px] mr-[16px]"
+        src="assets/image/scales.svg"
+        alt="sklit logo"
+      />
+      <p
+        class="text-[20px] mt-[5px] font-[500] text-[#ffffff] tracking-[0.3em]"
+      >
+        СКЛИТ
+      </p>
+    </a>
+    <div>DARK MODE</div>
+  </div>
+
+  <nav class="main-nav">
+    <a routerLinkActive="activeLink" routerLink="/home" mat-raised-button
+      >Главная</a
+    >
+    <a routerLinkActive="activeLink" routerLink="pharmacies" mat-raised-button
+      >Аптекам</a
+    >
+    <a routerLinkActive="activeLink" routerLink="wholesalers" mat-raised-button
+      >Оптовикам</a
+    >
+    <a
+      routerLinkActive="activeLink"
+      routerLink="representatives"
+      mat-raised-button
+      >Медицинским представителям</a
+    >
+    <a routerLinkActive="activeLink" routerLink="help" mat-raised-button
+      >Справочная служба по лекарствам</a
+    >
+    <a routerLinkActive="activeLink" routerLink="partners" mat-raised-button
+      >Партнеры</a
+    >
+    <a routerLinkActive="activeLink" routerLink="contacts" mat-raised-button
+      >Контакты</a
+    >
+  </nav>
+</header>
+<!--bg-[url('/img/hero-pattern.svg')]-->

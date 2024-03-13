@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+  color: #232222!important;
+  a{
+    letter-spacing: 0.2px!important;
+    color: #232222!important;
+
+}
+  strong {
+    font-weight: 500!important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+
+
+}
+.app-bg {
+  background-image: url("/assets/image/bg.svg");
+  background-size: 60%;
+  background-position: center;
+
+
+}
+.container {
+  //background-color:white;
+
+}
+.main {
+  background-color: rgba(237, 241, 255, 0.83);
+
+}
+.h1{
+  font-size: 40px;
+  font-weight: 500;
+  padding: 4px 16px;
+  margin-bottom: 18px;
+  margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,226,255,1) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+}
+
+
+.h2{
+  font-size: 32px;
+  font-weight: 500;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+    margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,.8) 0%, rgba(168,226,255,.6) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+
+}
+.h3{
+  font-size: 26px;
+  font-weight: 400;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+    margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,.6) 0%, rgba(168,226,255,.4) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+
+}
+
