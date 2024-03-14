@@ -1,0 +1,8 @@
+@import 'sidebar-wrapper';
+.content-box-wrapper {
+  width: calc(100% / 4 * 3 - 8px);
+  min-height: 100%;
+}
+.page-wrapper {
+  min-height: 100%;
+}

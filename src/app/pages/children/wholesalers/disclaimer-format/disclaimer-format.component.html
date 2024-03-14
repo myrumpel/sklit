@@ -1,1 +1,44 @@
-<p>disclaimer-format works!</p>
+<div class="w-[100%]">
+  <h2 class="h2">Формат отказов</h2>
+  <div class="content">
+    <h4 class="mb-[24px]">
+      <strong> Поставщикам</strong>
+    </h4>
+    <p class="mb-[28px]">
+      В вашей заявке должно быть два поля FILENAME и ID_UNIQ (Если их нет
+      обратитесь в СКЛИТ) Система отказов/подтверждений работает следующим
+      образом: 1) С нашей стороны для Вас в заявках приходят 2 колонки (если в
+      Вашем текущем формате их нет, обратитесь к нам, мы их добавим): filename -
+      имя файла отказа/подтверждения id_uniq - уникальный ключ для каждой
+      позиции в заявке 2) С Вашей стороны необходимо ОТДЕЛЬНО на каждую заявку
+      формировать файл отказа/подтверждения (т.е. группировать информацию по
+      нескольким заявкам в одном файле отказа НЕЛЬЗЯ) в формате dbf с именем из
+      колонки filename и следующей структурой:
+    </p>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef>Описание</th>
+        <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Размер</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <p class="mt-[28px]">
+      НА КАЖДУЮ позицию заявки должна быть соответствующая запись в файле
+      отказа. В противном случае по позициям, отсутствующим в файле
+      отказа/подтверждения, у клиента будет проставлено количество 0 (т.е.
+      полностью отказано). 3) В настройках транспортной программы СКЛИТ
+      (PostGetZay) на вкладке "Подтверждения" необходимо поставить галку
+      "Отправлять подтверждения в СКЛИТ", указать периодичность сеансов отправки
+      и папку, в которой будут лежать сформированные файлы отказов/подтверждений
+    </p>
+    <a class="download-link" mat-flat-button>Скачать образец отказов</a>
+  </div>
+</div>

@@ -1,54 +1,8 @@
 <div class="flex">
-  <nav class="sidebar">
-    <ul>
-      <li><a routerLink="/pharmacies/view-price">Просмотр прайсов</a></li>
-      <li>
-        <a routerLink="/pharmacies/materials-accounting">Учет материалов</a>
-      </li>
-      <li>
-        <a routerLink="/pharmacies/remote-access">Удаленный доступ</a>
-      </li>
-      <li>
-        <a routerLink="/pharmacies/auto-order">Автозаказ</a>
-      </li>
-      <li>
-        <a routerLink="/pharmacies/processing-of-invoices"
-          >Обработка накладных</a
-        >
-      </li>
-      <li>
-        <a routerLink="/pharmacies/operational-monitoring"
-          >Оперативный и ЕИАС мониторинги</a
-        >
-      </li>
-      <li>
-        <a routerLink="/pharmacies/individual-reports">Индивидуальные отчеты</a>
-      </li>
-      <li>
-        <a routerLink="/pharmacies/company-card">Карточка предприятия</a>
-      </li>
-      <li>
-        <a routerLink="/pharmacies/reinstalling-the-program"
-          >Переустановка программы с сохранением данныx</a
-        >
-      </li>
-      <li>
-        <a routerLink="/pharmacies/running-program-with-keys"
-          >Запуск программы с ключами</a
-        >
-      </li>
-      <li>
-        <a routerLink="/pharmacies/redistribution-application"
-          >Перераспределение заявки</a
-        >
-      </li>
-      <li>
-        <a routerLink="/pharmacies/import-application">Импорт заявки</a>
-      </li>
-      <li>
-        <a routerLink="/pharmacies/export-data">Экспорт данных</a>
-      </li>
-    </ul>
-  </nav>
-  <section><router-outlet></router-outlet></section>
+  <div class="sidebar-wrapper">
+    <app-sidebar [items]="items"></app-sidebar>
+  </div>
+  <app-content-box>
+    <router-outlet></router-outlet>
+  </app-content-box>
 </div>

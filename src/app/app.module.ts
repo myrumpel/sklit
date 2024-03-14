@@ -18,7 +18,6 @@ import { HelpComponent } from './pages/help/help.component';
 import { PartnersComponent } from './pages/partners/partners.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ParagraphComponent } from './components/layout/paragraph/paragraph.component';
 import { ViewPriceComponent } from './pages/children/wholesalers/view-price/view-price.component';
 import { ReportsComponent } from './pages/children/representatives/reports/reports.component';
 import { MaterialsAccountingComponent } from './pages/children/pharmacies/materials-accounting/materials-accounting.component';
@@ -42,6 +41,24 @@ import { InvoiceFormatComponent } from './pages/children/wholesalers/invoice-for
 import { DisclaimerFormatComponent } from './pages/children/wholesalers/disclaimer-format/disclaimer-format.component';
 import { PromotionDiscountBonusComponent } from './pages/children/wholesalers/promotion-discount-bonus/promotion-discount-bonus.component';
 import { SupplierShareReportComponent } from './pages/children/wholesalers/supplier-share-report/supplier-share-report.component';
+import { SidebarComponent } from './components/layout/sidebar/sidebar.component';
+import { ContentBoxComponent } from './components/layout/content-box/content-box.component';
+import { MatRipple } from '@angular/material/core';
+import { SectionDescriptionPharmaciesComponent } from './pages/children/pharmacies/section-description-pharmacies/section-description-pharmacies.component';
+import { SectionDescriptionWholesalersComponent } from './pages/children/wholesalers/section-description-wholesalers/section-description-wholesalers.component';
+import { ParagraphComponent } from './components/layout/paragraph/paragraph.component';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow,
+  MatHeaderRowDef,
+  MatRow,
+  MatRowDef,
+  MatTable,
+} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -56,10 +73,8 @@ import { SupplierShareReportComponent } from './pages/children/wholesalers/suppl
     PartnersComponent,
     ContactsComponent,
     NotFoundComponent,
-    ParagraphComponent,
     ViewPriceComponent,
     ReportsComponent,
-    ParagraphComponent,
     MaterialsAccountingComponent,
     RemoteAccessComponent,
     AutoOrderComponent,
@@ -80,8 +95,29 @@ import { SupplierShareReportComponent } from './pages/children/wholesalers/suppl
     DisclaimerFormatComponent,
     PromotionDiscountBonusComponent,
     SupplierShareReportComponent,
+    SidebarComponent,
+    ContentBoxComponent,
+    SectionDescriptionPharmaciesComponent,
+    SectionDescriptionWholesalersComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, MatAnchor, MatButton],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    MatAnchor,
+    MatButton,
+    MatRipple,
+    ParagraphComponent,
+    MatTable,
+    MatColumnDef,
+    MatHeaderCell,
+    MatCell,
+    MatCellDef,
+    MatHeaderCellDef,
+    MatHeaderRow,
+    MatRow,
+    MatRowDef,
+    MatHeaderRowDef,
+  ],
 
   providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],

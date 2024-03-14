@@ -1,1 +1,25 @@
-<p>price-list-format works!</p>
+<div class="w-[100%]">
+  <h2 class="h2">Формат прайс-листа</h2>
+  <div class="content">
+    <h4 class="mb-[18px]">Поставщикам</h4>
+    <p>Прайс должен быть в формате DBF</p>
+    <p class="mb-[24px]">Образец прайса:</p>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
+      <ng-container matColumnDef="code">
+        <th mat-header-cell *matHeaderCellDef>Название колонки</th>
+        <td mat-cell *matCellDef="let element">{{ element.code }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Описание</th>
+        <td mat-cell *matCellDef="let element">{{ element.description }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <a class="download-link" mat-flat-button>Скачать образец прайс-листа</a>
+  </div>
+</div>
