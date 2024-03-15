@@ -59,6 +59,8 @@ import {
   MatRowDef,
   MatTable,
 } from '@angular/material/table';
+import { H4Component } from './components/layout/headlines/h4/h4.component';
+import { InfoSectionComponent } from './components/layout/sections/info-section/info-section.component';
 
 @NgModule({
   declarations: [
@@ -99,6 +101,8 @@ import {
     ContentBoxComponent,
     SectionDescriptionPharmaciesComponent,
     SectionDescriptionWholesalersComponent,
+    H4Component,
+    InfoSectionComponent,
   ],
   imports: [
     BrowserModule,

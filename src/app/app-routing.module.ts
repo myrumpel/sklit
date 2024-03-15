@@ -41,14 +41,28 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
     path: 'pharmacies',
+    pathMatch: 'full',
+    redirectTo: 'pharmacies/section-description',
+  },
+  {
+    path: 'pharmacies',
     component: PharmaciesComponent,
     children: pharmaciesChildrenRoutes,
   },
-
+  {
+    path: 'wholesalers',
+    pathMatch: 'full',
+    redirectTo: 'wholesalers/section-description',
+  },
   {
     path: 'wholesalers',
     component: WholesalersComponent,
     children: wholesalersChildrenRoutes,
+  },
+  {
+    path: 'representatives',
+    pathMatch: 'full',
+    redirectTo: 'representatives/view-price',
   },
   {
     path: 'representatives',

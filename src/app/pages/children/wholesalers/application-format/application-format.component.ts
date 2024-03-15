@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { APPLICATION_FORMAT } from '../../../../data/tables/application-format';
+import { contentDataRu } from '../../../../data/pages/contentData';
 
 @Component({
   selector: 'app-application-format',
@@ -8,5 +8,6 @@ import { APPLICATION_FORMAT } from '../../../../data/tables/application-format';
 })
 export class ApplicationFormatComponent {
   displayedColumns: string[] = ['code', 'description'];
-  dataSource = APPLICATION_FORMAT;
+  data = contentDataRu.wholesalers.applicationFormat;
+  dataSource = this.data.table;
 }

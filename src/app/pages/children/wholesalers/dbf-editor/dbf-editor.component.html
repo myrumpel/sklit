@@ -1,6 +1,10 @@
-<h2 class="h2">DBF редактор</h2>
+<h2 class="h2">{{ data.title }}</h2>
 <div class="content">
-  <a class="download-link" mat-flat-button
-    >Скачать программу для просмотра DBF файлов</a
+  <a
+    class="download-link"
+    href="{{ data.button.link }}"
+    download="{{ data.button.fileText }}"
+    mat-flat-button
+    >{{ data.button.text }}</a
   >
 </div>

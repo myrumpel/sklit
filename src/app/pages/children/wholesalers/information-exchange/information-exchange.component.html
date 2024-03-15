@@ -1,254 +1,198 @@
-<h2 class="h2">Обмен информацией</h2>
+<h2 class="h2">{{ data.title }}</h2>
 <div class="content">
-  <h4><strong>Установка</strong></h4>
-  <p class="mb-[18px]">Содержимое архива распакуйте в папку на диске</p>
-  <p class="mb-[18px]">Запустите файл postgetzay.exe из папки</p>
-  <h4><strong>Настройка</strong></h4>
+  <app-info-section>
+    <app-h4>{{ data.section_1.title }}</app-h4>
 
-  <p class="mb-[18px]">
-    После запуска программы в нижнем правом углу нажимаем кнопку настройка
-  </p>
-  <h4><strong>Настройка приема заявок </strong></h4>
+    <app-paragraph *ngFor="let item of data.section_1.content">{{
+      item
+    }}</app-paragraph>
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    Галочка "Принимать заявки в ручном режиме" позволяет вручную принимать
-    заявки
-  </p>
-  <p class="mb-[18px]">
-    Галочка "Принимать заявки в автоматическом режиме" позволяет автоматически
-    принимать заявки через определенный интервал
-  </p>
-  <p class="mb-[18px]">
-    Периодичность сеансов=>Проверять с интервалом Х минут: Выставляется интервал
-    получения заявок в минутах (для автоматического режима)
-  </p>
-  <p class="mb-[18px]">
-    Параметры сеансов=>Получать заявки за последние Х дней: Период, за который
-    программа будет проверять наличие новых заявок
-  </p>
-  <p class="mb-[18px]">
-    Сохранение заявок: Каталог в который программа будет сохранять заявки
-  </p>
-  <p class="mb-[18px]">
-    Сохранение писем с заявками - Каталог в который будут сохраняться письма с
-    заявками
-  </p>
-  <p class="mb-[18px]">
-    "Enter" - печать заявки - при выборе заявки на вкладке "Заявки" и нажатии на
-    enter будет производиться печать заявки
-  </p>
-  <p class="mb-[18px]">
-    При печати предлагать выбор принтера: Если эта галочка не стоит, то печать
-    будет производиться на принтер по умолчанию
-  </p>
-  <p class="mb-[18px]">
-    Выделить цветом заявки с сообщениями от аптек: Если к заявке было
-    прикреплено сообщение от аптеки, то эта заявка выделится цветом
-  </p>
-  <img src="assets/wholesalersImages/obmen-info/obmen1.jpg" alt="" />
-  <h4><strong>Настройка отправки прайсов </strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_2.title }}</app-h4>
 
-  <p class="mb-[18px]">
-    Галочка "отправлять прайсы в СКЛИТ" - активирует функцию отправки прайсов
-  </p>
-  <p class="mb-[18px]">
-    Периодичность сеансов: Выставляется интервал (в минутах), с которым
-    программа будет проверять папку с прайсом и при его наличии отправлять его
-  </p>
-  <p class="mb-[18px]">
-    Расположение прайса - Путь откуда будет забираться прайс
-  </p>
-  <p class="mb-[18px]">
-    Название файла с прайсом - Можно выставить конкретное название файла с
-    прайсом или использовать маску для названия файла
-  </p>
-  <img src="assets/wholesalersImages/obmen-info/obmen2.jpg" alt="" />
+    <app-paragraph>{{ data.section_2.content }}</app-paragraph>
+  </app-info-section>
 
-  <h4><strong>Настройка отправки накладных</strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_3.title }}</app-h4>
 
-  <p class="mb-[18px]">
-    Галочка отправлять накладные в СКЛИТ - активирует функцию отправки Накладных
-  </p>
-  <p class="mb-[18px]">
-    Периодичность сеансов: Выставляется интервал (в минутах), с которым
-    программа будет проверять папку с накладными и при их наличии отправлять их
-  </p>
-  <p class="mb-[18px]">
-    Расположение накладных - Путь откуда будут забираться накладные
-  </p>
-  <p class="mb-[18px]">
-    Название файла с накладными - Можно выставить конкретное название файла
-    накладной или использовать маску для названия файлов
-  </p>
-  <img src="assets/wholesalersImages/obmen-info/obmen3.jpg" alt="" />
-  <h4><strong>Настройка отправки подтверждений</strong></h4>
+    <app-paragraph *ngFor="let item of data.section_3.content">{{
+      item
+    }}</app-paragraph>
+    <img
+      src="{{ data.section_3.images.src }}"
+      alt="{{ data.section_3.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    Галочка отправлять подтверждения в СКЛИТ - активирует функцию отправки
-    подтверждений
-  </p>
-  <p class="mb-[18px]">
-    Периодичность сеансов: Выставляется интервал (в минутах), с которым
-    программа будет проверять папку с подтверждениями и при их наличии
-    отправлять его
-  </p>
-  <p class="mb-[18px]">
-    Расположение подтверждений - Путь откуда будут забираться подтверждения
-  </p>
-  <p class="mb-[18px]">
-    Название файла с подтверждением - Можно выставить конкретное название файла
-    с подтверждением или использовать маску для названия файлов
-  </p>
+  <app-info-section>
+    <app-h4> {{ data.section_4.title }}</app-h4>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen4.jpg" alt="" />
-  <h4><strong>Настройка прокси сервера</strong></h4>
+    <app-paragraph *ngFor="let item of data.section_4.content">{{
+      item
+    }}</app-paragraph>
+    <img
+      src="{{ data.section_4.images.src }}"
+      alt="{{ data.section_4.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    Галочка "использовать прокси сервер": если вы используете прокси-сервер
-    необходимо включить данную опцию, после чего разблокируются поля ввода
-    параметров подключения
-  </p>
+  <app-info-section>
+    <app-h4> {{ data.section_5.title }}</app-h4>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen5.jpg" alt="" />
-  <h4><strong>Дополнительно</strong></h4>
+    <app-paragraph *ngFor="let item of data.section_5.content">{{
+      item
+    }}</app-paragraph>
+    <img
+      src="{{ data.section_5.images.src }}"
+      alt="{{ data.section_5.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    Галочка "вход с паролем" нужна для того, чтобы назначать прайсы, скидки,
-    коды клиентов могли только уполномоченные пользователи
-  </p>
-  <p class="mb-[18px]">
-    Галочка "место расположения файла настроек". По умолчанию настройки
-    программы хранятся в папке C:\temp\sklit, При необходимости можно поменять
-    на другой путь. При включенной опции разблокируется кнопка "изменить" с
-    помощью которой можно выбрать новое месторасположение файла с настройками.
-  </p>
-  <p class="mb-[18px]">
-    Галочка автоматический перевод даты - На вкладке заявки автоматически
-    переводит дату на следующий день
-  </p>
+  <app-info-section>
+    <app-h4> {{ data.section_6.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.section_6.content">{{
+      item
+    }}</app-paragraph>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen6.jpg" alt="" />
-  <h4><strong>Прием заявок</strong></h4>
+    <img
+      src="{{ data.section_6.images.src }}"
+      alt="{{ data.section_6.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    На вкладке заявки отображаются все заявки от аптек за определенный период,
-    для поиска нужной аптеки можно воспользоваться фильтром по аптекам.
-  </p>
-  <p class="mb-[18px]">
-    Получено сервером - Дата когда аптека отправила заявку
-  </p>
-  <p class="mb-[18px]">
-    Загружено с сервера - Дата когда программа скачала заявку
-  </p>
-  <p class="mb-[18px]">Аптека - Название, адрес аптеки</p>
-  <p class="mb-[18px]">В последней колонке можно помечать заявки</p>
-  <p class="mb-[18px]">
-    Вложение - Название файла в котором хранится заявку, папка с заявками
-    указана в настройках программы
-  </p>
-  <p class="mb-[18px]">
-    Формат заявки - Если вас не устраивает формат заявки - обратитесь в СКЛИТ
-    для согласования формата
-  </p>
+  <app-info-section>
+    <app-h4> {{ data.section_7.title }}</app-h4>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen7.jpg" alt="" />
-  <h4><strong>Отправка прайсов</strong></h4>
+    <app-paragraph>{{ data.section_7.content }}</app-paragraph>
 
-  <p class="mb-[18px]">
-    На вкладке прайсы отображается информация об отправленных файлах в СКЛИТ(с
-    левой стороны) и информация о статусе прайсов(с правой стороны). Информация
-    по отправленным файлам предоставлена за указанный период Левая таблица: -
-    Сеанс - номер по-порядку - Прайс - имя файла отправленного в СКЛИТ -
-    Подготовлен - Время когда был подготовлен файл к отправке - Отправлен -
-    Время отправки файла Правая таблица: - Прайс - Имя прайса в Системе СКЛИТ -
-    Дата прайса - Время когда прайс был обработан - Позиций - Количество позиций
-    в прайсе - Галочка - Если галочка стоит то прайс активный и его видят
-    клиенты Кнопка отправить - отправляет файл прайса из папки указанной в
-    настройках
-  </p>
+    <img
+      src="{{ data.section_7.images.src }}"
+      alt="{{ data.section_7.title }}"
+    />
+  </app-info-section>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen8.jpg" alt="" />
-  <h4><strong>Отправка накладных</strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_8.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.section_8.content">{{
+      item
+    }}</app-paragraph>
 
-  <p class="mb-[18px]">
-    На вкладке накладные отображается информация об отправленных файлах
-    накладных в СКЛИТ(за выставленный период) и их статусе обработки Файл
-    накладной - Имя файла который был отправлен в СКЛИТ из папки указанной в
-    настройках Дата - Дата отправки Статус - Статус обработки накладной, если
-    файл был успешно обработан и отправлен клиенту то его статус будет
-    "обработан" и в скобочках указан клиент получатель. Если файл не обработан
-    будет указана ошибка Кнопка отправить - Отправятся все файлы накладных
-    находящиеся в папке указанной в настройках
-  </p>
+    <img
+      src="{{ data.section_8.images.src }}"
+      alt="{{ data.section_8.title }}"
+    />
+  </app-info-section>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen9.jpg" alt="" />
+  <app-info-section>
+    <app-h4> {{ data.section_9.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.section_9.content">{{
+      item
+    }}</app-paragraph>
 
-  <h4><strong>Отправка подтверждений</strong></h4>
+    <img
+      src="{{ data.section_9.images.src }}"
+      alt="{{ data.section_9.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    Отправка подтверждений - механизм позволяющий оповестить клиента в каком
-    объеме будет удовлетворена его заявка На вкладке подтверждения отображается
-    информация об отправленных файлах подтверждений в СКЛИТ(за выставленный
-    период) Кнопка отправить - Отправятся все файлы подтверждений находящиеся в
-    папке указанной в настройках
-  </p>
+  <app-info-section>
+    <app-h4> {{ data.section_10.title }}</app-h4>
+    <app-paragraph>{{ data.section_10.content_1 }} </app-paragraph>
+    <app-paragraph>
+      <h5>{{ data.section_10.contentList_1.title }}</h5>
+      <ul>
+        <li *ngFor="let item of data.section_10.contentList_1.content">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>
+      <h5>{{ data.section_10.contentList_2.title }}</h5>
+      <ul>
+        <li *ngFor="let item of data.section_10.contentList_2.content">
+          {{ item }}
+        </li>
+      </ul>
+    </app-paragraph>
+    <app-paragraph>{{ data.section_10.content_2 }} </app-paragraph>
+    <img
+      src="{{ data.section_10.images.src }}"
+      alt="{{ data.section_10.title }}"
+    />
+  </app-info-section>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen10.jpg" alt="" />
-  <h4><strong>Дефектура</strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_11.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.section_11.content">{{
+      item
+    }}</app-paragraph>
 
-  <p class="mb-[18px]">
-    Дефектура - Позволяет увидеть пожелание аптеки купить конкретный товар
-  </p>
+    <img
+      src="{{ data.section_11.images.src }}"
+      alt="{{ data.section_11.title }}"
+    />
+  </app-info-section>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen11.jpg" alt="" />
-  <h4><strong>Назначение прайса аптекам </strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_12.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.section_12.content">{{
+      item
+    }}</app-paragraph>
 
-  <p class="mb-[18px]">
-    Есть возможность назначать/убирать аптекам прайсы. Выбираем с лева нужную
-    аптеку, с права включаем выключаем прайс
-  </p>
+    <img
+      src="{{ data.section_12.images.src }}"
+      alt="{{ data.section_12.title }}"
+    />
+  </app-info-section>
 
-  <img src="assets/wholesalersImages/obmen-info/obmen12.jpg" alt="" />
-  <h4><strong>Присвоение кодов аптекам</strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_13.title }}</app-h4>
+    <app-paragraph>{{ data.section_13.content }}</app-paragraph>
 
-  <p class="mb-[18px]">
-    Вы можете оптимизировать прием заявок путем назначения каждой аптеке
-    персонального кода. В левой таблице в поле код клиента можно выставить код
-    конкретному клиенту. Часто бывает что у клиента имеется несколько аптек и
-    соответственно несколько точек доставки. В правой части можно переключить
-    точку на адреса, и увидеть все адреса доставки данного клиента, а также
-    назначить каждому адресу свой код. Код аптеки должен приходить в заявке.
-    Если соответствующего поля нет, то за добавлением данного поля обратитесь в
-    СКЛИТ.
-  </p>
-  <h4><strong>Установка скидок и наценок клиентам</strong></h4>
+    <img
+      src="{{ data.section_13.images.src }}"
+      alt="{{ data.section_13.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    На вкладке клиенты в колонке наценка можно клиенту сделать наценку или
-    скидку. В колонке "%" - выставляется в процентном отношении, в колонке
-    "коэф." - можно выставить коэффициент -3% - Скидка три процента 3% - Наценка
-    три процента Колонка "Скр. нац." - Скрытая наценка (Если стоит флажок то
-    клиент не увидит скидку или наценку) Колонка "Запр. изм." - Запретить
-    изменения (Запрещает аптекам изменять скидку или наценку) Если указана
-    минимальная и максимальная цена в прайсе, то при любой скидке/наценки цена
-    не будет меньше/больше минимальной и максимальной.
-  </p>
-  <h4><strong>Ключи запуска postgetzay</strong></h4>
+  <app-info-section>
+    <app-h4> {{ data.section_14.title }}</app-h4>
+    <app-paragraph>{{ data.section_14.content }}</app-paragraph>
 
-  <p class="mb-[18px]">
-    POSTGETZAY.EXE GET_ZAY='1' - Автоматическое получение заявок POSTGETZAY.EXE
-    SEND_PRICE='1' - Автоматическая отправка прайса POSTGETZAY.EXE SEND_NAKL='1'
-    - Автоматическая отправка накладных POSTGETZAY.EXE SEND_BREAK= '1' -
-    Автоматическая отправка файлов отказа POSTGETZAY.EXE SEND_POSTSKID='1' -
-    Автоматическая отправка - скидок и наценок
-  </p>
-  <p>Наличие кавычек обязательно</p>
-  <h4><strong>Обратная связь </strong></h4>
+    <img
+      src="{{ data.section_14.images.src }}"
+      alt="{{ data.section_14.title }}"
+    />
+  </app-info-section>
 
-  <p class="mb-[18px]">
-    На вкладке реквизиты СКЛИТ находятся актуальные телефоны службы поддержки
-  </p>
-  <img src="assets/wholesalersImages/obmen-info/obmen13.jpg" alt="" />
+  <app-info-section>
+    <app-h4> {{ data.section_15.title }}</app-h4>
+    <app-paragraph>{{ data.section_15.content }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-h4> {{ data.section_16.title }}</app-h4>
+    <app-paragraph>{{ data.section_16.content }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-h4> {{ data.section_17.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.section_17.content">{{
+      item
+    }}</app-paragraph>
+  </app-info-section>
+
+  <app-info-section>
+    <app-h4> {{ data.section_18.title }}</app-h4>
+    <app-paragraph>{{ data.section_18.content }}</app-paragraph>
+
+    <img
+      src="{{ data.section_18.images.src }}"
+      alt="{{ data.section_18.title }}"
+    />
+  </app-info-section>
 </div>
 
 <!--<h4><strong>Установка</strong></h4>-->

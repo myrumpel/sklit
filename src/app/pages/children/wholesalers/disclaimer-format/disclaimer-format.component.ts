@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { INVOICE_FORMAT } from '../../../../data/tables/invoice-format';
 import { DISCLAIMER_FORMAT } from '../../../../data/tables/disclaimer-format';
+import { contentDataRu } from '../../../../data/pages/contentData';
 
 @Component({
   selector: 'app-disclaimer-format',
@@ -9,5 +9,6 @@ import { DISCLAIMER_FORMAT } from '../../../../data/tables/disclaimer-format';
 })
 export class DisclaimerFormatComponent {
   displayedColumns: string[] = ['code', 'description'];
-  dataSource = DISCLAIMER_FORMAT;
+  data = contentDataRu.wholesalers.disclaimerFormat;
+  dataSource = this.data.table;
 }

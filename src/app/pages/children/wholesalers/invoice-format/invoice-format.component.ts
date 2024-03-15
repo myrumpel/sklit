@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { INVOICE_FORMAT } from '../../../../data/tables/invoice-format';
+import { contentDataRu } from '../../../../data/pages/contentData';
 interface elementData {
   code: string;
   description: string;
@@ -12,5 +12,6 @@ interface elementData {
 })
 export class InvoiceFormatComponent {
   displayedColumns: string[] = ['code', 'description'];
-  dataSource = INVOICE_FORMAT;
+  data = contentDataRu.wholesalers.invoiceFormat;
+  dataSource = this.data.table;
 }

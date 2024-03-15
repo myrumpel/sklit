@@ -1,9 +1,10 @@
 <div class="w-[100%]">
-  <h2 class="h2">Формат прайс-листа</h2>
+  <h2 class="h2">{{ data.title }}</h2>
   <div class="content">
-    <h4 class="mb-[18px]">Поставщикам</h4>
-    <p>Прайс должен быть в формате DBF</p>
-    <p class="mb-[24px]">Образец прайса:</p>
+    <app-h4>{{ data.content.title }}</app-h4>
+    <app-paragraph *ngFor="let item of data.content.text">{{
+      item
+    }}</app-paragraph>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z1">
       <ng-container matColumnDef="code">
         <th mat-header-cell *matHeaderCellDef>Название колонки</th>
@@ -20,6 +21,12 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     </table>
 
-    <a class="download-link" mat-flat-button>Скачать образец прайс-листа</a>
+    <a
+      class="download-link"
+      href="{{ data.buttons.link }}"
+      download="{{ data.buttons.fileText }}"
+      mat-flat-button
+      >{{ data.buttons.text }}</a
+    >
   </div>
 </div>

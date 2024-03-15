@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { contentDataRu } from '../../data/pages/contentData';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   // animations: {},
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  data = contentDataRu.homePage;
+}

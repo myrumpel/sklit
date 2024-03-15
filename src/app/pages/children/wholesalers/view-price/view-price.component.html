@@ -1,30 +1,24 @@
-<h2 class="h2">Программа просмотра прайсов</h2>
+<h2 class="h2">{{ data.title }}</h2>
 <div class="content">
   <ul>
-    <li>Для установки программы необходимо:</li>
-    <li>1.Скачать программу просмотра прайсов</li>
-    <li>2.Запустить файл установки.</li>
-    <li>3.Следовать инструкциям установщика .</li>
-    <li>- Программа создаст на Вашем рабочем столе ярлык "Просмотр прайсов"</li>
-    <li>- По умолчанию программа устанавливается в папку "C:\sklit"</li>
-    <li>
-      Важно: Если у вас операционная система windows 7, windows 8, windows 10,
-    </li>
-    <li>
-      то установку в папку "C:\Program Files\sklit" надо производить с правами
-      администратора
-    </li>
-    <li>
-      Если программа установлена в папку "C:\Program Files\sklit" её надо
-      запускать с правами администратора
-    </li>
-    <li>
-      Будем рады ответить на все Ваши вопросы - пишите: office&#64;sklit.org.
-    </li>
-    <li>Звоните по тел. в г. Краснодаре (861) 298-01-50.</li>
-    <li>Желаем Вам успешной работы!</li>
+    <li *ngFor="let item of data.content">{{ item }}</li>
   </ul>
-  <a class="download-link" mat-flat-button
-    >Скачать программу просмотра прайсов</a
+
+  <app-paragraph
+    >Будем рады ответить на все Ваши вопросы - пишите:
+    <a href="mailto:{{ data.email }}">{{ data.email }}</a
+    >.</app-paragraph
+  >
+  <app-paragraph
+    >Звоните по тел. в г. Краснодаре
+    <a href="tel:{{ data.phones.numberHref }}">{{ data.phones.numberView }}</a
+    >. Желаем Вам успешной работы!</app-paragraph
+  >
+  <a
+    class="download-link"
+    href="{{ data.button.link }}"
+    download="{{ data.button.fileText }}"
+    mat-flat-button
+    >{{ data.button.text }}</a
   >
 </div>

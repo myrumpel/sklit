@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PRICE_LIST_FORMAT } from '../../../../data/tables/price-list-format';
+import { contentDataRu } from '../../../../data/pages/contentData';
 
 @Component({
   selector: 'app-price-list-format',
@@ -8,5 +8,6 @@ import { PRICE_LIST_FORMAT } from '../../../../data/tables/price-list-format';
 })
 export class PriceListFormatComponent {
   displayedColumns: string[] = ['code', 'description'];
-  dataSource = PRICE_LIST_FORMAT;
+  data = contentDataRu.wholesalers.priceListFormat;
+  dataSource = this.data.table;
 }
