@@ -2,9 +2,10 @@
   <div class="sidebar-wrapper">
     <app-sidebar [items]="items"></app-sidebar>
   </div>
-  <div class="content-box-wrapper">
+
+  <div class="w-full">
     <app-content-box>
-      <router-outlet></router-outlet>
+      <div class="w-full"><router-outlet></router-outlet></div>
     </app-content-box>
   </div>
 </div>

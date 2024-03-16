@@ -1,1 +1,17 @@
-<p>reinstalling-the-program works!</p>
+<div class="w-full">
+  <h2 class="h2">{{ data.title }}</h2>
+  <div class="content">
+    <app-paragraph>
+      <ul>
+        <li class="mb-[8px]" *ngFor="let item of data.content">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+    <a
+      class="download-link"
+      href="{{ data.buttons.link }}"
+      download="{{ data.buttons.fileText }}"
+      mat-flat-button
+      >{{ data.buttons.text }}</a
+    >
+  </div>
+</div>

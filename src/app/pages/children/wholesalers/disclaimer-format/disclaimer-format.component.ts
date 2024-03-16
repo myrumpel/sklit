@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { DISCLAIMER_FORMAT } from '../../../../data/tables/disclaimer-format';
 import { contentDataRu } from '../../../../data/pages/contentData';
 
 @Component({

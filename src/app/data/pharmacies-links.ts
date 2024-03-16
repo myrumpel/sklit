@@ -11,7 +11,11 @@ export const pharmaciesLinks: sidebarLinks[] = [
   },
   {
     link: '/pharmacies/materials-accounting',
-    text: 'Учет материалов',
+    text: 'Учёт материалов',
+  },
+  {
+    link: '/pharmacies/install-program-materials-accounting',
+    text: 'Установка программы учёта материалов',
   },
   {
     link: '/pharmacies/remote-access',
@@ -33,10 +37,10 @@ export const pharmaciesLinks: sidebarLinks[] = [
     link: '/pharmacies/individual-reports',
     text: 'Индивидуальные отчеты',
   },
-  {
-    link: '/pharmacies/company-card',
-    text: 'Карточка предприятия',
-  },
+  // {
+  //   link: '/pharmacies/company-card',
+  //   text: 'Карточка предприятия',
+  // },
   {
     link: '/pharmacies/reinstalling-the-program',
     text: 'Переустановка программы с сохранением данныx',

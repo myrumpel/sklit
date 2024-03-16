@@ -13,6 +13,16 @@ import { invoiceFormatData } from '../../pages/children/wholesalers/invoice-form
 import { disclaimerFormatData } from '../../pages/children/wholesalers/disclaimer-format/contentDataDisclaimerFormat';
 import { promotionDiscountBonusData } from '../../pages/children/wholesalers/promotion-discount-bonus/contentDataPromotionDiscountBonus';
 import { individualReportsData } from '../../pages/children/pharmacies/individual-reports/contentDataIndividualReports';
+import { importApplicationData } from '../../pages/children/pharmacies/import-application/contentDataImportApplication';
+import { RedistributionApplicationData } from '../../pages/children/pharmacies/redistribution-application/contentDataRedistributionApplication';
+import { runningProgramWithKeysData } from '../../pages/children/pharmacies/running-program-with-keys/contentDataRunningProgramWithKeys';
+import { reinstallingTheProgramData } from '../../pages/children/pharmacies/reinstalling-the-program/contentDataReinstallingTheProgram';
+import { operationalMonitoringData } from '../../pages/children/pharmacies/operational-monitoring/contentDataOperationalMonitoring';
+import { processingOfInvoicesData } from '../../pages/children/pharmacies/processing-of-invoices/contentDataProcessingOfInvoices';
+import { autoOrderData } from '../../pages/children/pharmacies/auto-order/contentDataAutoOrder';
+import { remoteAccessData } from '../../pages/children/pharmacies/remote-access/contentDataRemoteAccess';
+import { installProgramMaterialsAccountingData } from '../../pages/children/pharmacies/install-program-materials-accounting/contentDataInstallProgramMaterialsAccounting';
+import { materialsAccountingData } from '../../pages/children/pharmacies/materials-accounting/contentDataMaterialsAccounting';
 
 export const contentDataRu = {
   homePage: homeData,
@@ -21,6 +31,16 @@ export const contentDataRu = {
   help: helpData,
   pharmacies: {
     individualReports: individualReportsData,
+    importApplication: importApplicationData,
+    redistributionApplication: RedistributionApplicationData,
+    runningProgramWithKeys: runningProgramWithKeysData,
+    reinstallingTheProgram: reinstallingTheProgramData,
+    operationalMonitoring: operationalMonitoringData,
+    processingOfInvoices: processingOfInvoicesData,
+    autoOrder: autoOrderData,
+    remoteAccess: remoteAccessData,
+    installProgramMaterialsAccounting: installProgramMaterialsAccountingData,
+    materialsAccounting: materialsAccountingData,
   },
   wholesalers: {
     description: sectionDescriptionData,

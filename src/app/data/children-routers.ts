@@ -22,6 +22,7 @@ import { DisclaimerFormatComponent } from '../pages/children/wholesalers/disclai
 import { PromotionDiscountBonusComponent } from '../pages/children/wholesalers/promotion-discount-bonus/promotion-discount-bonus.component';
 import { SectionDescriptionPharmaciesComponent } from '../pages/children/pharmacies/section-description-pharmacies/section-description-pharmacies.component';
 import { SectionDescriptionWholesalersComponent } from '../pages/children/wholesalers/section-description-wholesalers/section-description-wholesalers.component';
+import { InstallProgramMaterialsAccountingComponent } from '../pages/children/pharmacies/install-program-materials-accounting/install-program-materials-accounting.component';
 
 export const pharmaciesChildrenRoutes: Routes = [
   {
@@ -30,6 +31,11 @@ export const pharmaciesChildrenRoutes: Routes = [
   },
   { path: 'view-price', component: ViewPriceComponent },
   { path: 'materials-accounting', component: MaterialsAccountingComponent },
+  {
+    path: 'install-program-materials-accounting',
+    component: InstallProgramMaterialsAccountingComponent,
+  },
+
   { path: 'remote-access', component: RemoteAccessComponent },
   { path: 'auto-order', component: AutoOrderComponent },
   {

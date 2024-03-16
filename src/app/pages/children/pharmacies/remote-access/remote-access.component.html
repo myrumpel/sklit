@@ -1,1 +1,10 @@
-<p>remote-access works!</p>
+<h2 class="h2">{{ data.title }}</h2>
+<div class="content">
+  <a
+    class="download-link"
+    href="{{ data.buttons.link }}"
+    download="{{ data.buttons.fileText }}"
+    mat-flat-button
+    >{{ data.buttons.text }}</a
+  >
+</div>

@@ -61,6 +61,8 @@ import {
 } from '@angular/material/table';
 import { H4Component } from './components/layout/headlines/h4/h4.component';
 import { InfoSectionComponent } from './components/layout/sections/info-section/info-section.component';
+import { H5Component } from './components/layout/headlines/h5/h5.component';
+import { InstallProgramMaterialsAccountingComponent } from './pages/children/pharmacies/install-program-materials-accounting/install-program-materials-accounting.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +104,9 @@ import { InfoSectionComponent } from './components/layout/sections/info-section/
     SectionDescriptionPharmaciesComponent,
     SectionDescriptionWholesalersComponent,
     H4Component,
+    H5Component,
     InfoSectionComponent,
+    InstallProgramMaterialsAccountingComponent,
   ],
   imports: [
     BrowserModule,
