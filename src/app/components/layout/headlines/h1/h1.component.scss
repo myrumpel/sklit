@@ -1,0 +1,18 @@
+h2{
+  font-size: 32px;
+  font-weight: 500;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+  margin-left: -16px;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,.8) 0%, rgba(168,226,255,.6) 0%, rgba(255,255,255,0) 60%);
+  border-radius: 8px;
+}
+:host-context(#dark){
+ h2{
+    background: rgba(126, 126, 126, 1.0)!important;
+
+    background: linear-gradient(90deg, rgb(37, 37, 44) 0%, rgb(105, 105, 105) 0%, rgba(255,255,255,0) 60%)!important;
+  }
+
+}
