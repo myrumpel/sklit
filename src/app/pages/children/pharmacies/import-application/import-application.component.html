@@ -1,1 +1,31 @@
-<p>import-application works!</p>
+<div class="w-[100%]">
+  <h2 class="h2">{{ data.title }}</h2>
+  <div class="content">
+    <app-h4>{{ data.subtitle.title_1 }}</app-h4>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.text_1">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+
+    <app-h4>{{ data.subtitle.title_2 }}</app-h4>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.text_2">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+
+    <app-h4>{{ data.subtitle.title_3 }}</app-h4>
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.text_3">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+
+    <app-paragraph>
+      <ul>
+        <li *ngFor="let item of data.content.text_4">{{ item }}</li>
+      </ul>
+    </app-paragraph>
+  </div>
+</div>

@@ -20,33 +20,22 @@ import { ApplicationFormatComponent } from '../pages/children/wholesalers/applic
 import { InvoiceFormatComponent } from '../pages/children/wholesalers/invoice-format/invoice-format.component';
 import { DisclaimerFormatComponent } from '../pages/children/wholesalers/disclaimer-format/disclaimer-format.component';
 import { PromotionDiscountBonusComponent } from '../pages/children/wholesalers/promotion-discount-bonus/promotion-discount-bonus.component';
-import { SupplierShareReportComponent } from '../pages/children/wholesalers/supplier-share-report/supplier-share-report.component';
+import { SectionDescriptionPharmaciesComponent } from '../pages/children/pharmacies/section-description-pharmacies/section-description-pharmacies.component';
+import { SectionDescriptionWholesalersComponent } from '../pages/children/wholesalers/section-description-wholesalers/section-description-wholesalers.component';
+import { InstallProgramMaterialsAccountingComponent } from '../pages/children/pharmacies/install-program-materials-accounting/install-program-materials-accounting.component';
 
-export const representativesChildrenRoutes: Routes = [
-  { path: 'view-price', component: ViewPriceComponent },
-  { path: 'reports', component: ReportsComponent },
-];
-export const wholesalersChildrenRoutes: Routes = [
-  { path: 'view-price', component: ViewPriceComponent },
-  { path: 'information-exchange', component: InformationExchangeComponent },
-  { path: 'dbf-editor', component: DbfEditorComponent },
-  { path: 'price-list-format', component: PriceListFormatComponent },
-  { path: 'application-format', component: ApplicationFormatComponent },
-  { path: 'invoice-format', component: InvoiceFormatComponent },
-  { path: 'disclaimer-format', component: DisclaimerFormatComponent },
-  {
-    path: 'promotion-discount-bonus',
-    component: PromotionDiscountBonusComponent,
-  },
-  {
-    path: 'supplier-share-report',
-    component: SupplierShareReportComponent,
-  },
-  { path: 'individual-reports', component: IndividualReportsComponent },
-];
 export const pharmaciesChildrenRoutes: Routes = [
+  {
+    path: 'section-description',
+    component: SectionDescriptionPharmaciesComponent,
+  },
   { path: 'view-price', component: ViewPriceComponent },
   { path: 'materials-accounting', component: MaterialsAccountingComponent },
+  {
+    path: 'install-program-materials-accounting',
+    component: InstallProgramMaterialsAccountingComponent,
+  },
+
   { path: 'remote-access', component: RemoteAccessComponent },
   { path: 'auto-order', component: AutoOrderComponent },
   {
@@ -73,4 +62,28 @@ export const pharmaciesChildrenRoutes: Routes = [
   },
   { path: 'import-application', component: ImportApplicationComponent },
   { path: 'export-data', component: ExportDataComponent },
+];
+export const wholesalersChildrenRoutes: Routes = [
+  {
+    path: 'section-description',
+    component: SectionDescriptionWholesalersComponent,
+  },
+
+  { path: 'view-price', component: ViewPriceComponent },
+  { path: 'information-exchange', component: InformationExchangeComponent },
+  { path: 'dbf-editor', component: DbfEditorComponent },
+  { path: 'price-list-format', component: PriceListFormatComponent },
+  { path: 'application-format', component: ApplicationFormatComponent },
+  { path: 'invoice-format', component: InvoiceFormatComponent },
+  { path: 'disclaimer-format', component: DisclaimerFormatComponent },
+  {
+    path: 'promotion-discount-bonus',
+    component: PromotionDiscountBonusComponent,
+  },
+
+  { path: 'individual-reports', component: IndividualReportsComponent },
+];
+export const representativesChildrenRoutes: Routes = [
+  { path: 'view-price', component: ViewPriceComponent },
+  { path: 'reports', component: ReportsComponent },
 ];

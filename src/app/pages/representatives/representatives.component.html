@@ -1,11 +1,11 @@
-<div class="flex">
-  <nav class="sidebar">
-    <ul>
-      <li><a routerLink="/representatives/view-price">Просмотр прайсов</a></li>
-      <li>
-        <a routerLink="/representatives/reports">Отчеты</a>
-      </li>
-    </ul>
-  </nav>
-  <section><router-outlet></router-outlet></section>
+<div class="page-wrapper flex justify-between min-h-full">
+  <div class="sidebar-wrapper">
+    <app-sidebar [items]="items"></app-sidebar>
+  </div>
+
+  <div class="w-full">
+    <app-content-box>
+      <div class="w-full"><router-outlet></router-outlet></div>
+    </app-content-box>
+  </div>
 </div>

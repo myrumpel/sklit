@@ -1,33 +1,24 @@
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
-<p>view-price works!</p>
+<h2 class="h2">{{ data.title }}</h2>
+<div class="content">
+  <ul>
+    <li *ngFor="let item of data.content">{{ item }}</li>
+  </ul>
+
+  <app-paragraph
+    >Будем рады ответить на все Ваши вопросы - пишите:
+    <a href="mailto:{{ data.email }}">{{ data.email }}</a
+    >.</app-paragraph
+  >
+  <app-paragraph
+    >Звоните по тел. в г. Краснодаре
+    <a href="tel:{{ data.phones.numberHref }}">{{ data.phones.numberView }}</a
+    >. Желаем Вам успешной работы!</app-paragraph
+  >
+  <a
+    class="download-link"
+    href="{{ data.button.link }}"
+    download="{{ data.button.fileText }}"
+    mat-flat-button
+    >{{ data.button.text }}</a
+  >
+</div>

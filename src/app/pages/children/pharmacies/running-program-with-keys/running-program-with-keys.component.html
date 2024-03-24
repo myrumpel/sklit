@@ -1,1 +1,26 @@
-<p>running-program-with-keys works!</p>
+<div class="w-full">
+  <h2 class="h2">{{ data.title }}</h2>
+  <div class="content">
+    <app-info-section
+      ><app-paragraph *ngFor="let item of data.content.text">{{
+        item
+      }}</app-paragraph>
+    </app-info-section>
+    <app-info-section>
+      <app-h4>{{ data.content.element_1.title }}</app-h4>
+      <app-paragraph>
+        <ul>
+          <li *ngFor="let item of data.content.element_1.text">{{ item }}</li>
+        </ul>
+      </app-paragraph></app-info-section
+    >
+    <app-info-section>
+      <app-h4>{{ data.content.element_2.title }}</app-h4>
+      <app-paragraph>
+        <ul>
+          <li *ngFor="let item of data.content.element_2.text">{{ item }}</li>
+        </ul>
+      </app-paragraph></app-info-section
+    >
+  </div>
+</div>

@@ -1,1 +1,10 @@
-<p>promotion-discount-bonus works!</p>
+<div class="w-[100%]">
+  <h2 class="h2">{{ data.title }}</h2>
+  <div class="content">
+    <app-h4>{{ data.subtitle }}</app-h4>
+    <ul>
+      <li class="mb-[12px]" *ngFor="let item of data.content">{{ item }}</li>
+    </ul>
+    <app-paragraph class="font-[500]">{{ data.warn }}</app-paragraph>
+  </div>
+</div>

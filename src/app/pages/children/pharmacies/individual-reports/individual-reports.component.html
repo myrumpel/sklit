@@ -1,1 +1,6 @@
-<p>individual-reports works!</p>
+<div class="w-[100%]">
+  <h2 class="h2">{{ data.title }}</h2>
+  <div class="content">
+    <app-paragraph *ngFor="let item of data.content">{{ item }}</app-paragraph>
+  </div>
+</div>
